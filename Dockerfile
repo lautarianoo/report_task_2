@@ -18,7 +18,7 @@ RUN pip install --upgrade pip && \
 COPY . /code/
 
 # Expose port 8000
-EXPOSE 8000
+EXPOSE 8080
 
 # Use gunicorn on port 8000
-CMD ["gunicorn", "--bind", ":8000", "--workers", "2", "report_task_2.wsgi"]
+CMD ["gunicorn", "--bind", ":8080", "--workers", "2", "report_task_2.wsgi"]
